@@ -1,0 +1,74 @@
+@keyframes NavItem-selected {
+  0% {
+    color: var(--theme-subdued);
+    font-weight: 900;
+  }
+  100% {
+    color: var(--theme-accent);
+    font-weight: 900;
+  }
+}
+
+@keyframes Underline-hovered {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 2rem;
+  }
+}
+
+@keyframes Underline-selected {
+  0% {
+    border-bottom-color: var(--theme-subdued);
+    width: 2rem;
+  }
+  100% {
+    border-bottom-color: var(--theme-accent);
+    width: 100%;
+  }
+}
+
+.NavItem {
+  position: relative;
+  background-color: inherit;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--theme-subdued);
+  font-weight: 700;
+}
+
+.NavItem:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-bottom: 2px solid var(--theme-subdued);
+}
+
+.NavItem:hover:not(:disabled):after {
+  animation-name: Underline-hovered;
+  animation-timing-function: ease-in-out;
+  animation-duration: 300ms;
+  width: 2rem;
+}
+
+.NavItem:disabled:after {
+  animation-name: Underline-selected;
+  animation-timing-function: ease-out;
+  animation-duration: 200ms;
+  width: 100%;
+  border-bottom-color: var(--theme-accent);
+}
+
+.NavItem:active { outline: none; }
+
+.NavItem:disabled {
+  animation-name: NavItem-selected;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  color: var(--theme-accent);
+  font-weight: 900;
+}
+

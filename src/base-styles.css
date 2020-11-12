@@ -1,0 +1,76 @@
+:root {
+  --size-xs: 0.25rem;
+  --size-sm: 0.5rem;
+  --size-reg: 1rem;
+  --size-lg: 1.5rem;
+  --size-xl: 2.5rem;
+
+  --interval-1: 1.00;
+  --interval-2: 1.33;
+  --interval-3: 1.66;
+  --interval-4: 2.00;
+
+  --theme-accent: hsl(180, 50%, 45%);
+  --theme-subdued: hsl(180, 5%, 50%);
+  --theme-warning: hsl(10, 70%, 65%);
+}
+
+.p1 {
+  padding: var(--size-xs);
+}
+.p2 {
+  padding: var(--size-sm);
+}
+.p3 {
+  padding: var(--size-reg);
+}
+.ph1 {
+  padding-left: var(--size-xs);
+  padding-right: var(--size-xs);
+}
+.ph2 {
+  padding-left: var(--size-sm);
+  padding-right: var(--size-sm);
+}
+.ph3 {
+  padding-left: var(--size-reg);
+  padding-right: var(--size-reg);
+}
+.pv1 {
+  padding-top: var(--size-xs);
+  padding-bottom: var(--size-xs);
+}
+.pv2 {
+  padding-top: var(--size-sm);
+  padding-bottom: var(--size-sm);
+}
+.pv3 {
+  padding-top: var(--size-reg);
+  padding-bottom: var(--size-reg);
+}
+
+.fs1 {
+  font-size: var(--size-sm);
+}
+.fs2 {
+  font-size: var(--size-reg);
+}
+.fs3 {
+  font-size: var(--size-lg);
+}
+.fs4 {
+  font-size: var(--size-xl);
+}
+
+.lh1 {
+  line-height: var(--interval-1);
+}
+.lh2 {
+  line-height: var(--interval-2);
+}
+.lh3 {
+  line-height: var(--interval-3);
+}
+.lh4 {
+  line-height: var(--interval-4);
+}
